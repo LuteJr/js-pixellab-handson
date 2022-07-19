@@ -1,6 +1,6 @@
 var person = {
-  name: 'Ove',
-  surname: 'Flo',
+  name: 'Jack',
+  surname: 'Black',
   friends: {},
 };
 
@@ -61,4 +61,16 @@ console.log(
   carol.friends.andra.friends.person.name +
     ' ' +
     carol.friends.andra.friends.person.surname,
+);
+
+console.log(
+  person.friends.andra.friends.larry.name +
+    ' ' +
+    person.friends.andra.friends.larry.surname,
+);
+
+console.log(
+  (
+    andra.friends.person.name.length + andra.friends.person.surname.length
+  ).toString(),
 );
