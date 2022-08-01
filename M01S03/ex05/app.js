@@ -1,6 +1,6 @@
 var person = {
-  name: 'Ovidu',
-  surname: 'Giurgiuveanu',
+  name: 'John',
+  surname: 'Deere',
   age: 32,
   petOwner: false,
   skills: ['html', 'javascript', 'css'],
@@ -26,6 +26,10 @@ var person = {
 
 console.log(person.friends);
 
+console.warn(
+  'Afiseaza propozitia: “Ma numesc xxx yyy si stiu html si css.” Foloseste notatia cu paranteze patrate',
+);
+
 console.log(
   'Ma numesc ' +
     person.name +
@@ -38,22 +42,50 @@ console.log(
     '.',
 );
 
+console.warn(
+  'Afiseaza propozitia “Sunt xxx si acum invat JavaScript.” Nu folosi valoarea din arrayul de skills.',
+);
+
+console.log('Sunt ' + person.name + ' si acum invat JavaScript.');
+console.log('Sunt ' + person.name + ' si stiu HTML si CSS.');
+
+console.warn(
+  'Afiseaza propozitia “Am x prieteni: Larry, Steven si Carol.” Foloseste proprietatea length si apeleaza direct proprietatile name ale obiectelor.',
+);
+
+console.log(
+  'Am ' +
+    person.friends.length +
+    ' prieteni: ' +
+    person.friends[0].name +
+    ',' +
+    ' ' +
+    person.friends[1].name +
+    ' ' +
+    'si' +
+    ' ' +
+    person.friends[2].name +
+    '.',
+);
+
+console.log(
+  'Ma numesc ' + person.name + ' ' + ' si acum invat ' + person.skills[1] + '.',
+);
+
 console.log(
   'Ma numesc ' +
     person.name +
     ' ' +
-    ' si acum invatat ' +
+    person.surname +
+    ' si vreau sa invat ' +
     person.skills[1] +
     '.',
 );
 
 console.log(
-  'Am' +
-    ' ' +
+  'Am ' +
     person.friends.length +
-    ' ' +
-    'prieteni:' +
-    ' ' +
+    ' prieteni: ' +
     person.friends[0].surname +
     ',' +
     ' ' +
@@ -66,29 +98,14 @@ console.log(
 );
 
 console.log(
-  'Ma numesc ' +
+  'Numele meu este ' +
     person.name +
     ' ' +
-    person.surname +
-    ' si vreau sa invatat ' +
-    person.skills[1] +
-    '.',
-);
-
-console.log(
-  'Numele meu este' +
-    ' ' +
-    person.name +
     person.surname +
     ',' +
-    ' ' +
-    'am' +
-    ' ' +
+    ' am ' +
     person.age +
-    ' ' +
-    'si' +
-    ' ' +
+    ' ani si ' +
     person.friends.length +
-    ' ' +
-    'prienteni.',
+    ' prieteni.',
 );
