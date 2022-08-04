@@ -1,6 +1,6 @@
 var person = {
-  name: 'Jack',
-  surname: 'Black',
+  name: 'Dragos',
+  surname: 'Iordache',
   age: 35,
   petOwner: false,
   skills: [
@@ -33,45 +33,58 @@ var person = {
 };
 
 console.warn(
-  `Folosind obiectul person si forEach,
-  afiseaza skillurile din pozitiile impare ale arrayului.`,
+  `
+    Folosind obiectul person si forEach,
+    afiseaza skillurile din pozitiile impare ale arrayului.
+  `,
 );
-
 person.skills.forEach(function (skill, index) {
   if (index % 2 !== 0) {
     console.log(skill);
   }
 });
 
-console.warn(`In mod similar, afiseaza skillurile care contin litera a.`);
-
+console.warn(
+  `
+    In mod similar, afiseaza skillurile care contin litera a.
+  `,
+);
 person.skills.forEach(function (skill) {
-  if (skill.includes('a')) {
+  if (skill.toLowerCase().includes('a')) {
     console.log(skill);
   }
 });
 
-console.warn(`Folosind forEach afiseazapropozitia:
-"Prietenii mei se numesc xxx yyy, xxx yyy si xxx yyy."`);
-
-var message = 'Prientenii mei se numesc ';
+console.warn(
+  `
+    Folosind forEach afiseaza propozitia:
+    "Prietenii mei se numesc xxx yyy, xxx yyy si xxx yyy."
+  `,
+);
+var message = 'Prietenii mei se numesc ';
 person.friends.forEach(function (friend, index, friends) {
-  var puctuation = ', ';
-  if (index === friends.length - 1) {
-    puctuation = '.';
+  var punctuation = ', ';
+  var friendsCount = friends.length;
+
+  if (index === friendsCount - 1) {
+    punctuation = '.';
   }
 
-  // if (index === friends.length - 2) {
+  // if (index === friendsCount - 2) {
+  //   punctuation = ' si ';
   // }
 
-  message += friend.name + ' ' + friend.surname + puctuation;
+  message += friend.name + ' ' + friend.surname + punctuation;
 });
 console.log(message);
 
-console.warn(`Folosind forEach, afiseaza numarul total de ani pe care
-il au persoanele din arrayul friends, doar daca au varsta mai
-mare decat 30 inclusiv.`);
-
+console.warn(
+  `
+    Folosind forEach, afiseaza numarul total de
+    ani pe care il au persoanele din arrayul friends,
+    doar daca au varsta mai mare decat 30 inclusiv.
+  `,
+);
 var totalAge = 0;
 person.friends.forEach(function (friend) {
   if (friend.age >= 30) {
@@ -80,41 +93,47 @@ person.friends.forEach(function (friend) {
 });
 console.log(totalAge.toString());
 
-console.warn(`Folosind forEach, afiseaza suma anilor de nastere
-a persoanellor care au varsta impara`);
-
+console.warn(
+  `
+    Folosind forEach, afiseaza suma anilor de nastere
+    a persoanelor care au varsta impara.
+  `,
+);
 var totalYears = 0;
-var curentYear = 2022;
+var currentYear = 2022;
 person.friends.forEach(function (friend) {
-  var birthYear = curentYear - friend.age;
+  var birthYear = currentYear - friend.age;
 
   if (friend.age % 2 !== 0) {
     totalYears += birthYear;
   }
 });
-
 console.log(totalYears.toString());
 
-console.warn(`Afiseaza diferenta de varsta dintre
-persoana si prietenii din arrayul friends daca
-acesta este mai mare sau egala cu 2 ani.`);
-
+console.warn(
+  `
+    Afiseaza diferenta de varsta dintre
+    persoana si prietenii din arrayul friends daca
+    aceasta este mai mare sau egala cu 2 ani.
+  `,
+);
 person.friends.forEach(function (friend) {
-  var ageDif = Math.abs(person.age - friend.age);
+  var ageDiff = Math.abs(person.age - friend.age);
 
-  if (ageDif >= 2) {
-    console.log(ageDif);
+  if (ageDiff >= 2) {
+    console.log(ageDiff);
   }
 });
 
-console.warn(`
-Afiseaza fraza: "Intre Dragos si Larry este o diferenta de xx ani."
-Intre Dragos si Steven ...
-`);
-
+console.warn(
+  `
+    Afiseaza fraza: "Intre Dragos si Larry este o diferenta de xx ani.
+    Intre Dragos si Steven... "
+  `,
+);
 var message = '';
 person.friends.forEach(function (friend) {
-  var ageDif = Math.abs(person.age - friend.age);
+  var ageDiff = Math.abs(person.age - friend.age);
 
   message +=
     'Intre ' +
@@ -122,19 +141,92 @@ person.friends.forEach(function (friend) {
     ' si ' +
     friend.name +
     ' este o diferenta de ' +
-    ageDif +
+    ageDiff +
     ' ani. ';
 });
-
 console.log(message.trim());
 
 console.warn(
   `
-  Folisind metoda reverse si apoi forEach, afiseaza
-  in ordine inversa elementele arrayului skills.
+    Folosind metoda reverse si apoi forEach, afiseaza
+    in ordine inversa elementele arrayului skills.
   `,
 );
+person.skills
+  .slice()
+  .reverse()
+  .forEach(function (skill) {
+    console.log(skill);
+  });
 
-person.skills.reverse().forEach(function (skill) {
+console.warn(
+  `Folosind obiectul person si forEach, afiseaza in consola skillurile pe care le are persoana.`,
+);
+
+person.skills.forEach(function (skill) {
   console.log(skill);
 });
+
+console.warn(`In mod similar, afiseaza skillurile care nu incep cu j.`);
+
+person.skills.forEach(function (skill) {
+  if (skill.toLowerCase().charAt(0) !== 'j') {
+    console.log(skill);
+  }
+});
+
+console.warn(` Folosind forEach afiseaza propozitia:
+"Numele mari ale prietenilor mei sunt xxx, xxx, xxx."`);
+
+var message = 'Numele mari ale prietenilor mei sunt ';
+
+person.friends.forEach(function (friend, index, friends) {
+  var punctuation = ', ';
+  var friendsCount = friends.length;
+
+  if (index === friendsCount - 1) {
+    punctuation = '.';
+  }
+
+  message += friend.surname + punctuation;
+});
+console.log(message);
+
+console.warn(
+  `Folosind forEach, afiseaza numarul total de ani pe care il au persoanele din arrayul friends `,
+);
+
+var totalAge = 0;
+person.friends.forEach(function (friend) {
+  totalAge += friend.age;
+});
+console.log(totalAge.toString());
+
+console.warn(`Folosind forEach, afiseaza suma anilor de nastere a persoanelor`);
+
+var totalBornAge = 0;
+person.friends.forEach(function (friend) {
+  totalBornAge += currentYear - friend.age;
+});
+
+console.log(totalBornAge.toString());
+
+console.warn(` Afiseaza diferenta de varsta dintre persoana si prietenii din arrayul friends.
+`);
+
+var ageDiff = 0;
+person.friends.forEach(function (friend) {
+  ageDiff = Math.abs(person.age - friend.age);
+  console.log(ageDiff);
+});
+
+console.warn(`Folosind metoda reverse si apoi forEach,
+afiseaza in ordine inversa numele complet al prietenilor din arrayul friends.
+`);
+
+person.friends
+  .slice()
+  .reverse()
+  .forEach(function (friend) {
+    console.log(friend.name + ' ' + friend.surname);
+  });

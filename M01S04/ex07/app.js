@@ -62,3 +62,19 @@ for (var i = 0; i < friendsCount; i++) {
 
   console.log(fullName + ' are mai mult de 13 caractere.');
 }
+
+console.warn(
+  `Folosind o bucla for afiseaza proprietatea name a tuturor obiectelor din arrayul friends.`,
+);
+
+for (var i = 0; i < friendsCount; i++) {
+  var friendName = friends[i].name;
+
+  console.log(friendName);
+}
+
+for (var i = 0; i < friendsCount; i++) {
+  var friendFullName = friends[i].name + ' ' + friends[i].surname;
+
+  console.log(friendFullName);
+}
