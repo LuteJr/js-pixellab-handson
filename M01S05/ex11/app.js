@@ -49,6 +49,6 @@ console.log(
   `${pet.getName()} este ${pet.getSpecies()} si are ${pet.getAge()} ani.`,
 );
 
-let petAge = pet.getAge; //nu prea am inteles cerinta aici si nici nu se face verde
+let petAge = pet.getAge();
 
-console.log(`Animalul meu are ${petAge()} ani.`);
+console.log(`Animalul meu are ${petAge} ani.`);
