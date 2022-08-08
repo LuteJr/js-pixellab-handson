@@ -9,13 +9,30 @@ button si foloseste numele clickHandler ca parametru.`);
 
 const button = document.getElementById('clicker');
 const removeButton = document.getElementById('remove');
+const age = document.getElementById('age');
+// const message = document.getElementById('message');
 
 button.addEventListener('click', clickHandler);
 removeButton.addEventListener('click', function () {
   button.removeEventListener('click', clickHandler);
 });
+age.addEventListener('click', ageExtractor, ageExtractorText);
 
 //hoisting
 function clickHandler() {
   alert('Ai apasat butonul!');
 }
+
+function ageExtractor() {
+  let agePrint = prompt(`Ce varsta ai?`);
+
+  return console.log(`Ai ${agePrint} ani.`);
+}
+
+function ageExtractorText() {
+  let agePrint = prompt(`Ce varsta ai?`);
+
+  return `Ai ${agePrint} ani.`;
+}
+
+document.getElementById('message').innerHTML = ageExtractorText();

@@ -21,3 +21,14 @@ care sa primeasca doi parametrii si sa calculeze
 suprafata unui dreptunghi. `);
 
 console.log(calculateSquareSurface(4));
+
+console.warn(`Creeaza un wrapper numit calculateRectangleSurface() pentru calculateSurface()
+care sa primeasca doi parametrii si sa calculeze suprafata unui dreptunghi. `);
+
+function calculateRectangleSurface(width, length) {
+  return calculateSurface(width, length);
+}
+
+console.warn(`Cu metoda noua calculeaza suprafata unui dreptunghi de 8 pe 9. `);
+
+console.log(calculateRectangleSurface(8, 9));
