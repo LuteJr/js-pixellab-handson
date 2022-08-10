@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  height: 600px;
+  background: #000;
+}
+
+body section {
+  width: 350px;
+  height: 350px;
+  filter: blur(1px);
+}
+
+.glow {
+  display: inline-block;
+  position: relative;
+  min-width: 750px;
+  height: 750px;
+  margin: 0px;
+  transform-origin: right;
+  animation: colorChange 5s linear infinite;
+}
+
+.glow:nth-child(even) {
+  transform-origin: left;
+}
+
+@keyframes colorChange {
+  0% {
+    filter: hue-rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+    transform: rotate(0deg);
+  }
+}
+
+.glow span {
+  position: absolute;
+  top: calc(20px / var(--i));
+  left: calc(80px / var(--i));
+  bottom: calc(20px / var(--i));
+  right: calc(80px / var(--i));
+}
+
+.glow span::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  width: 15px;
+  height: 15px;
+  background: #f00;
+  border-radius: 50%;
+}
+
+.glow span:nth-child(3n + 1):before {
+  background-color: rgb(50, 38, 182);
+  box-shadow: 0 0 5px rgba(50, 38, 182, 1), 0 0 10px rgba(50, 38, 182, 1),
+    0 0 20px rgba(50, 38, 182, 1), 0 0 2px rgba(50, 38, 182, 0.1);
+}
+
+.glow span:nth-child(3n + 2):before {
+  background-color: rgba(255, 214, 0, 1);
+  box-shadow: 0 0 5px rgba(255, 214, 0, 1), 0 0 10px rgba(255, 214, 0, 1),
+    0 0 20px rgba(255, 214, 0, 1), 0 0 2px rgba(255, 214, 0, 0.1);
+}
+
+.glow span:nth-child(3n + 3):before {
+  background-color: rgb(41, 131, 143);
+  box-shadow: 0 0 5px rgb(41, 131, 143), 0 0 10px rgba(41, 131, 143, 1),
+    0 0 20px rgba(41, 131, 143, 1), 0 0 2px rgba(41, 131, 143, 0.1);
+}
+
+.glow span:nth-child(3n + 4):before {
+  background-color: rgb(136, 14, 111);
+  box-shadow: 0 0 5px rgba(136, 14, 111), 0 0 10px rgba(136, 14, 111),
+    0 0 20px rgba(136, 14, 111), 0 0 2px rgba(136, 14, 111, 0.1);
+}
+
+.glow span:nth-child(3n + 1) {
+  animation: animate2 10s alternate infinite;
+}
+
+.glow span:nth-child(3n + 2) {
+  animation: animate-reverse2 3s alternate infinite;
+}
+
+.glow span:nth-child(3n + 3) {
+  animation: animate2 8s alternate infinite;
+}
+
+.glow span:nth-child(3n + 4) {
+  animation: animate2-reverse 6s alternate infinite;
+}
+
+@keyframes animate2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-reverse2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.glow2 {
+  position: relative;
+  min-width: 350px;
+  height: 350px;
+  margin: -250px;
+  transform-origin: left;
+  animation: colorChange 5s linear infinite;
+}
+
+.glow2:nth-child(even) {
+  transform-origin: right;
+}
+
+@keyframes colorChange {
+  0% {
+    filter: hue-rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.glow2 span {
+  position: absolute;
+  top: calc(60px * var(--i));
+  left: calc(60px * var(--i));
+  bottom: calc(60px * var(--i));
+  right: calc(60px * var(--i));
+}
+
+.glow2 span::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  width: 25px;
+  height: 25px;
+  background: #f00;
+  border-radius: 50%;
+}
+
+.glow2 span:nth-child(3n + 1):before {
+  background-color: rgba(134, 255, 0, 1);
+  box-shadow: 0 0 5px rgba(134, 255, 0, 1), 0 0 10px rgba(134, 255, 0, 1),
+    0 0 20px rgba(134, 255, 0, 1), 0 0 2px rgba(134, 255, 0, 0.1);
+}
+
+.glow2 span:nth-child(3n + 2):before {
+  background-color: rgba(255, 214, 0, 1);
+  box-shadow: 0 0 5px rgba(255, 214, 0, 1), 0 0 10px rgba(255, 214, 0, 1),
+    0 0 20px rgba(255, 214, 0, 1), 0 0 2px rgba(255, 214, 0, 0.1);
+}
+
+.glow2 span:nth-child(3n + 3):before {
+  background-color: rgba(0, 226, 255, 1);
+  box-shadow: 0 0 5px rgba(0, 226, 255, 1), 0 0 10px rgba(0, 226, 255, 1),
+    0 0 20px rgba(0, 226, 255, 1), 0 0 2px rgba(0, 226, 255, 0.1);
+}
+
+.glow2 span:nth-child(3n + 4):before {
+  background-color: rgb(136, 14, 111);
+  box-shadow: 0 0 5px rgba(136, 14, 111), 0 0 10px rgba(136, 14, 111),
+    0 0 20px rgba(136, 14, 111), 0 0 2px rgba(136, 14, 111, 0.1);
+}
+
+.glow2 span:nth-child(3n + 1) {
+  animation: animate2 10s alternate infinite;
+}
+
+.glow2 span:nth-child(3n + 2) {
+  animation: animate2-reverse 3s alternate infinite;
+}
+
+.glow2 span:nth-child(3n + 3) {
+  animation: animate2 8s alternate infinite;
+}
+
+.glow2 span:nth-child(3n + 4) {
+  animation: animate2-reverse 6s alternate infinite;
+}
+
+@keyframes animate2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes animate2-reverse {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

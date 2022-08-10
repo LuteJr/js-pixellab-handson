@@ -1,0 +1,93 @@
+.digital-clock {
+  position: relative;
+  color: #fff;
+  width: 350px;
+  height: 350px;
+  padding: 20px 45px;
+  box-shadow: 0 -10px 10px rgba(255, 255, 255, 0.1),
+    inset 0 -10px 10px rgba(255, 255, 255, 0.01), 0 10px 10px rgba(0, 0, 0, 0.3),
+    inset 0 10px 10px rgba(0, 0, 0, 0.3);
+  border: 8px solid rgba(255, 255, 255, 0.04);
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 22222;
+  font-family: 'Poppins', sans-serif;
+}
+
+.time {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hour,
+.dots,
+.minutes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  padding: 0 5px;
+  line-height: 125px;
+}
+
+.hour,
+.minutes {
+  font-size: 4.5em;
+  width: 125px;
+  background: -webkit-linear-gradient(
+    135deg,
+    rgba(201, 201, 201, 0.8),
+    rgba(124, 124, 124, 0.6)
+  );
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.dots {
+  font-size: 3em;
+  color: rgb(108, 108, 108);
+}
+
+.right-side {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.period,
+.seconds {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.period {
+  transform: translateY(-20px);
+  background: -webkit-linear-gradient(
+    135deg,
+    rgba(201, 201, 201, 0.8),
+    rgba(124, 124, 124, 0.6)
+  );
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.seconds {
+  transform: translateY(16px);
+  background: -webkit-linear-gradient(
+    135deg,
+    rgba(201, 201, 201, 0.8),
+    rgba(124, 124, 124, 0.6)
+  );
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}

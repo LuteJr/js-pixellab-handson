@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="IE=edge"
+  >
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link
+    rel="stylesheet"
+    href="styles/nav.css"
+  >
+  <link
+    rel="stylesheet"
+    href="styles/digital-clock.css"
+  >
+  <link
+    rel="stylesheet"
+    href="styles/analog-watch.css"
+  >
+  <link
+    rel="stylesheet"
+    href="styles/styles.css"
+  >
+  <title>Simple watch</title>
+</head>
+
+<body>
+  <div class="nav">
+    <ul>
+      <li>
+        <a
+          href="#"
+          title="Analog Watch"
+          class="analog-watch"
+        ><i class="fa-solid fa-clock"></i></a>
+      </li>
+      <li>
+        <a
+          href="#"
+          title="Digital Watch"
+          class="digital-watch"
+        ><i class="fa-solid fa-stopwatch-20"></i></a>
+      </li>
+      <li>
+        <a
+          href="#"
+          title="Counter"
+          class="counter"
+        ><i class="fa-solid fa-rocket"></i></a>
+      </li>
+      <li>
+        <a
+          href="#"
+          title="Stopwatch"
+          class="stop-watch"
+        ><i class="fa-solid fa-person-running"></i>
+          </i></a>
+      </li>
+
+      <li>
+        <a
+          href="#"
+          title="Alarm"
+          class="alarm-clock"
+        ><i class="fa-solid fa-bell"></i></a>
+      </li>
+    </ul>
+  </div>
+  <div class="glass"></div>
+  <div class="title">
+    <h1>The Analog</h1>
+  </div>
+  <div class="container">
+    <div class="clock">
+      <span style="--i:1"><b>1</b></span>
+      <span style="--i:2"><b>2</b></span>
+      <span style="--i:3"><b>3</b></span>
+      <span style="--i:4"><b>4</b></span>
+      <span style="--i:5"><b>5</b></span>
+      <span style="--i:6"><b>6</b></span>
+      <span style="--i:7"><b>7</b></span>
+      <span style="--i:8"><b>8</b></span>
+      <span style="--i:9"><b>9</b></span>
+      <span style="--i:10"><b>10</b></span>
+      <span style="--i:11"><b>11</b></span>
+      <span style="--i:12"><b>12</b></span>
+      <b></b>
+      <div class="hour">
+        <div
+          class="hr"
+          id="hr"
+        ></div>
+      </div>
+
+      <div class="min">
+        <div
+          class="mn"
+          id="mn"
+        ></div>
+      </div>
+
+      <div class="sec">
+        <div
+          class="sc"
+          id="sc"
+        ></div>
+      </div>
+    </div>
+    <div class="digital-clock">
+      <span class="hour">02</span>
+      <span class="dots">:</span>
+      <span class="minutes">02</span>
+      <div class="right-side">
+        <span class="period">AM/PM</span>
+        <span class="seconds">02</span>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>

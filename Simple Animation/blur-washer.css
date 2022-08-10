@@ -1,0 +1,12 @@
+.washer {
+  position: absolute;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: transparent;
+  backdrop-filter: blur(12px);
+  transition: 0.2s;
+  border: 2px solid white;
+  border-radius: 50%;
+}
