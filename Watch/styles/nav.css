@@ -34,7 +34,7 @@ ul li a .fa-solid {
 }
 
 ul li a:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 5px;
   left: -10px;
@@ -46,7 +46,7 @@ ul li a:before {
 }
 
 ul li a:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -9px;
   left: -4px;
