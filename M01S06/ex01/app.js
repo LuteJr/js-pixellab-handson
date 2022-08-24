@@ -17,6 +17,8 @@ var car = {
   speed: 50,
   isTrunkOpen: false,
   areLightsOn: false,
+  topSpeed: 60,
+  topReverseSpeed: 15,
 
   accelerate: function () {
     this.speed++;
@@ -25,7 +27,7 @@ var car = {
     this.speed--;
   },
 
-  openTrnk: function () {
+  openTrunk: function () {
     this.isTrunkOpen = true;
   },
   closeTrunk: function () {
@@ -47,5 +49,15 @@ var car = {
     setTimeout(function () {
       self.turnLightsOff();
     }, 5000);
+  },
+
+  stop: function () {
+    this.speed = 0;
+  },
+
+  setSpeed: function (speed) {
+    if (this.topSpeed <= this.speed || this.topReverseSpeed < this.speed) {
+      this.speed = 20;
+    }
   },
 };
