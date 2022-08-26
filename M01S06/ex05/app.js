@@ -31,8 +31,10 @@
     });
 
     removeEventsButton.addEventListener('click', function () {
-      showButton.remove();
-      toggleButton.remove();
+      if (confirm('Esti sigur ca vrei sa stergi butoanele din DOM?')) {
+        showButton.remove();
+        toggleButton.remove();
+      }
     });
   });
 
