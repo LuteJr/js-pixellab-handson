@@ -3,18 +3,40 @@ var Car = {
   color: '',
   wheels: 4,
   speed: 0,
+  topSpeed: 140,
+  topReverseSpeed: 5,
 
   displaySpeed: function () {
     console.log(`Viteza curenta este:, ${this.speed}`);
   },
 
   accelerate: function () {
-    this.speed = this.speed + 1;
+    if (this.speed < this.topSpeed) {
+      this.speed = this.speed + 1;
+    }
     this.displaySpeed();
   },
   decelerate: function () {
-    this.speed = this.speed - 1;
+    if (this.speed > this.topReverseSpeed) {
+      this.speed = this.speed - 1;
+    }
     this.displaySpeed();
+  },
+
+  setSpeed(speed) {
+    if (this.speed > this.topSpeed) {
+      this.speed = this.topSpeed;
+    } else {
+      this.speed = this.speed;
+    }
+
+    if (speed < this.topReverseSpeed) {
+      this.speed = this.topReverseSpeed;
+
+      return;
+    }
+
+    this.speed = this.speed;
   },
 };
 

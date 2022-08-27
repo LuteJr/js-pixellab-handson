@@ -55,6 +55,17 @@ class Car {
   turnLightsOff() {
     this.areLightsOn = false;
   }
+
+  flashLights() {
+    setTimeout(
+      () => {
+        window.setTimeout();
+      },
+      1000,
+      this.turnLightsOn,
+      this.turnLightsOff,
+    );
+  }
 }
 
 const audi = new Car('Audi', 'black', 4, 50);
